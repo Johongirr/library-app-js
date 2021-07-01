@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>My library</title>
+</head>
+
+<body class="page">
+    <main class="main page__main">
+        <aside class="sidebar main__sidebar">
+            <div class="sidebar__top">
+                <header class="sidebar__header">
+                    <h1 class="sidebar__title">
+                        <span class="sidebar__book-icon-box">
+                            <i class="fas fa-book sidebar__book-icon"></i>
+                        </span> 
+                        Library
+                    </h1>
+                </header>
+                
+                <section class="favourites sidebar__favourites">
+                    <i class="fas fa-heart favourites__icon"></i>
+                    <header class="favourites__header">
+                        <a href="#" class="favourites__link">
+                            <h2 class="favourites__title">
+                                Favourites
+                                <i class="fas fa-long-arrow-alt-right favourites__direct"></i>
+                            </h2>
+                        </a>
+                    </header>
+                </section>
+                <section class="genres-box">
+                    
+                    <header class="genres-box__header">
+                        <i class="fas fa-book genres-box__icon"></i>
+                       <a href="#" class="genres-box__link">
+                            <h2 class="genres-box__title">
+                                Genres
+                                <i class="fas fa-caret-up info-box__arrow"></i>
+                            </h2>
+                       </a>
+                    </header>
+                    <ul class="genres sidebar__genres">
+                        <li class="genres__item genres__item--active">
+                            <a href="#" class="genres__link">
+                                Random
+                            </a>
+                        </li>
+                        <li class="genres__item">
+                            <a href="#" class="genres__link">
+                                Classic
+                            </a>
+                        </li>
+                        <li class="genres__item">
+                            <a href="#" class="genres__link">
+                                Fantasy
+                            </a>
+                        </li>
+                        <li class="genres__item">
+                            <a href="#" class="genres__link">
+                                Horror
+                            </a>
+                        </li>
+                        <li class="genres__item">
+                            <a href="#" class="genres__link">
+                                Crime
+                            </a>
+                        </li>
+                        <li class="genres__item">
+                            <a href="#" class="genres__link">
+                                Romance
+                            </a>
+                        </li>
+                        <li class="genres__item">
+                            <a href="#" class="genres__link">
+                                Thriller
+                            </a>
+                        </li>
+                        <li class="genres__item">
+                            <a href="#" class="genres__link">
+                                Self-improvement
+                            </a>
+                        </li>
+                        <li class="genres__item">
+                            <a href="#" class="genres__link">
+                                Drama
+                            </a>
+                        </li>
+                        <li class="genres__item">
+                            <a href="#" class="genres__link">
+                                Family
+                            </a>
+                        </li>
+                        <li class="genres__item">
+                            <a href="#" class="genres__link">
+                                War
+                            </a>
+                        </li>
+                        <li class="genres__item">
+                            <a href="#" class="genres__link">
+                                Comedy
+                            </a>
+                        </li>
+                        <li class="genres__item">
+                            <a href="#" class="genres__link">
+                                Mystery
+                            </a>
+                        </li>
+                        <li class="genres__item">
+                            <a href="#" class="genres__link">
+                                Cartoon
+                            </a>
+                        </li>
+                        <li class="genres__item">
+                            <a href="#" class="genres__link">
+                                Sport
+                            </a>
+                        </li>
+                        <li class="genres__item">
+                            <a href="#" class="genres__link">
+                                Diet
+                            </a>
+                        </li>
+                        <li class="genres__item">
+                            <a href="#" class="genres__link">
+                                History
+                            </a>
+                        </li>
+                        <li class="genres__item">
+                            <a href="#" class="genres__link">
+                                Comic book
+                            </a>
+                        </li>
+                        <li class="genres__item">
+                            <a href="#" class="genres__link">
+                                Dictionary
+                            </a>
+                        </li>
+                        <li class="genres__item">
+                            <a href="#" class="genres__link">
+                                Autobiography
+                            </a>
+                        </li>
+                        <li class="genres__item">
+                            <a href="#" class="genres__link">
+                                Biography
+                            </a>
+                        </li>
+                        <li class="genres__item">
+                            <a href="#" class="genres__link">
+                                Cookbook
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="info-box sidebar__info-box">
+                    <header class="info-box__header">
+                        <i class="fas fa-info-circle info-box__icon"></i>
+                        <a href="#" class="info-box__link">
+                            <h2 class="info-box__title">
+                                Information
+                                <i class="fas fa-caret-up info-box__arrow"></i>
+                            </h2>
+                        </a>
+                    </header>
+                    <ul class="info sidebar__info">
+                        <li class="info__item">
+                           <p class="info__text">
+                               Books
+                           </p> 
+                           <p class="info__books-amount">
+                               0
+                           </p> 
+                        </li>
+                        <li class="info__item">
+                            <p class="info__text">
+                                Completed Books
+                            </p>
+                            <p class="info__completed-books-amount">
+                                0
+                            </p>
+                        </li>
+                        <li class="info__item">
+                             <p class="info__text">
+                                 Total Pages
+                             </p>
+                             <p class="info__total-pages-amount">
+                                 0
+                             </p>
+                        </li>
+                        <li class="info__item">
+                             <p class="info__text">
+                                 Read Pages
+                             </p>
+                             <p class="info__read-pages-amount">
+                                 0
+                             </p>
+                        </li>
+                    </ul>
+                </section>
+                <section class="danger-zone sidebar__danger-zone">
+                    <header class="danger-zone__header">
+                        <i class="fas fa-exclamation-triangle danger-zone__icon"></i>
+                        <a href="#" class="danger-zone__link">
+                            <h2 class="danger-zone__title">
+                                Danger Zone
+                                <i class="fas fa-caret-up info-box__arrow"></i>
+                            </h2>
+                        </a>
+                    </header>
+                    <button data-delete="all" class="btn btn__delete-all-btn danger-zone__btn">Delete All</button>
+                </section>
+            </div>
+            <footer class="sidebar-footer">
+                <ul class="sidebar-footer__list">
+                    <li class="sidebar-footer__item">
+                       <small class="sidebar-footer__copyright-text">
+                           &copy; All rights reserved built by Johongir
+                       </small>
+                    </li>
+                    <!-- <li class="sidebar-footer__item">
+                        <a href="#" class="sidebar-footer__link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li> -->
+                </ul>
+            </footer>
+
+        </aside>
+        <section class="form-box">
+            <header class="form-box__header">
+                <h2 class="form-box__title">
+                    Add New Book to Collection
+                </h2>
+            </header>
+            <form action="#" class="form form__add-book" id="add-book-form">
+                <div class="form__control">
+                    <label class="form__label" for="title">Title</label>
+                    <input type="text" id="add-book-form__title" name="book-title" class="form__input" placeholder="Book title..." required>
+                </div>
+                <div class="form__control">
+                    <label class="form__label" for="author">Author</label>
+                    <input type="text" id="add-book-form__author" name="book-author" class="form__input" placeholder="Book author..." required>
+                </div>
+                <div class="form__control">
+                    <label class="form__label" for="pages">Pages</label>
+                    <input type="number" id="add-book-form__pages" name="book-pages" class="form__input" placeholder="Number of pages..." required>
+                </div>
+                <div class="form__control">
+                    <label class="form__label" for="categories">Category</label>
+                    <select class="form__select" name="categories" id="add-book-form__categories">
+                        <option value="Random">Random</option>
+                        <option value="Autobiography">Autobiography</option>
+                        <option value="Biography">Biography</option>
+                        <option value="Cookbook">Cookbook</option>
+                        <option value="Diary">Diary</option>
+                        <option value="Comic book">Comic book</option>
+                        <option value="Crime">Crime</option>
+                        <option value="Dictionary">Dictionary</option>
+                        <option value="History">History</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Family">Family</option>
+                        <option value="War">War</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Classic">Classic</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Sport">Sport</option>
+                        <option value="Diet">Diet</option>
+                        <option value="Self-improvement">Self Improvement</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Cartoon">Cartoon</option>
+                    </select>
+                </div>
+                <div class="form__control form__control-checkbox">
+                    <input type="checkbox" id="add-book-form__read" name="is-read" class="form__checkbox">
+                    <label for="read">I've read this book</label>
+                </div>
+                <div class="form__control form__control-checkbox">
+                    <input type="checkbox" id="add-book-form__favourite" name="is-favourite" class="form__checkbox">
+                    <label for="favourite">It's my favouire book</label>
+                </div>
+                <div class="form__btns-box">
+                    <button data-cancel="cancel-btn" id="add-book-form__cancel-btn" class="btn form__cancel-btn">
+                        Cancel
+                    </button>
+                    <button data-add="add-btn" id="add-book-form__add-btn" class="btn form__add-btn">
+                        Add Book
+                    </button>
+                    
+                    
+                    
+                </div>
+            </form>
+            <form action="#" class="form__edit-book" id="edit-book-form">
+                <div class="form__control">
+                    <label class="form__label" for="title">Title</label>
+                    <input type="text" id="edit-book-form__title" name="book-title" class="form__input" placeholder="Book title..." required>
+                </div>
+                <div class="form__control">
+                    <label class="form__label" for="author">Author</label>
+                    <input type="text" id="edit-book-form__author" name="book-author" class="form__input" placeholder="Book author..." required>
+                </div>
+                <div class="form__control">
+                    <label class="form__label" for="pages">Pages</label>
+                    <input type="number" id="edit-book-form__pages" name="book-pages" class="form__input" placeholder="Number of pages..." required>
+                </div>
+                <div class="form__control">
+                    <label class="form__label" for="categories">Category</label>
+                    <select class="form__select" name="categories" id="edit-book-form__categories">
+                        <option value="Random">Random</option>
+                        <option value="Autobiography">Autobiography</option>
+                        <option value="Biography">Biography</option>
+                        <option value="Cookbook">Cookbook</option>
+                        <option value="Diary">Diary</option>
+                        <option value="Comic book">Comic book</option>
+                        <option value="Crime">Crime</option>
+                        <option value="Dictionary">Dictionary</option>
+                        <option value="History">History</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Family">Family</option>
+                        <option value="War">War</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Classic">Classic</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Sport">Sport</option>
+                        <option value="Diet">Diet</option>
+                        <option value="Self-improvement">Self Improvement</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Cartoon">Cartoon</option>
+                    </select>
+                </div>
+                <div class="form__control form__control-checkbox">
+                    <input type="checkbox" id="edit-book-form__read" name="is-read" class="form__checkbox">
+                    <label for="read">I've read this book</label>
+                </div>
+                <div class="form__control form__control-checkbox">
+                    <input type="checkbox" id="edit-book-form__favourite" name="is-favourite" class="form__checkbox">
+                    <label for="favourite">It's my favouire book</label>
+                </div>
+                <div class="form__btns-box">
+                    
+                    <button data-cancel="cancel-btn" id="edit-book-form__cancel-btn" class="btn form__cancel-btn">
+                        Cancel
+                    </button>
+                    <button data-edit="edit-btn" id="edit-book-form__edit-btn" class="btn form__edit-btn">
+                        Edit
+                    </button>
+                    
+                </div>
+            </form>
+        </section>
+        <section class="main__main-area">
+            <div class="search-box">
+                 
+                    <input type="text" name="search-book" class="search-input" placeholder="Search by title...">
+               
+            </div>
+            <div class="add-books-box">
+                <button class="btn add-books-box__btn">
+                    <i class="fa fa-plus add-books-box__icon"></i>
+                    Add New Book
+                </button>
+            </div>
+            <section class="books">
+                <header class="books__header">
+                    <h2 data-genre="random" class="books__title">
+                        Genre: Random
+                    </h2>
+                </header>
+                <div class="books__box">
+                    <div class="books__row">
+                        <!-- <article class="book">
+                            <header class="book__header">
+                                <h2 class="book__title">
+                                    <span class="book__title-span">
+                                        Title:
+                                    </span>
+                                    <span class="book__title-container">
+                                        The Power of noW
+                                    </span>
+                                </h2>
+                                <h2 class="book__author">
+                                    <span class="book__author-span">
+                                        Author:
+                                    </span>
+                                    <span class="book__author-container">
+                                        Eckhart Tolle
+                                    </span>
+                                </h2>
+                            </header>
+                            <div class="book__read-status">
+                                <button class="book__read-btn">
+                                    <i class="fa fa-times book__read-icon book__not-read"> </i>
+                                </button>
+                                <p class="book__read-text">
+                                    Not read yet!
+                                </p>
+                            </div>
+                            <section class="book__btns">
+                                <button class="book__edit-btn">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="book__delete-btn">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </section>
+                             
+                            <section class="book__btns">
+                                <div class="book__read-pages">
+                                    Read 
+                                    <span class="book__read-amount-page">
+                                        0
+                                    </span>
+                                    of 
+                                    <span class="book__total-book-pages">
+                                        200
+                                    </span>
+                                    pages
+                                </div>
+                                <button data-btn-type = "decrement" class="btn book__increment-btn book__read-amount-btn">
+                                    -
+                                </button>
+                                <button data-btn-type = "increment" class="btn book__increment-btn book__read-amount-btn">
+                                    +
+                                </button>
+                            </section>
+                        </article> -->
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="modal">
+            <div class="modal__box">
+                <header class="modal__header">
+                    <h2 class="modal__title">
+                        Delete This Book
+                    </h2>
+                </header>
+                <p class="modal__text">
+                    Are you 100% sure if you click DELETE btn, you can't undo process
+                </p>
+                <footer class="modal__footer">
+                    <button class="btn modal__cancel-btn">
+                        Cancel
+                    </button>
+                    <button class="btn modal__delete-btn">
+                        Delete
+                    </button>
+                </footer>
+            </div>
+        </section>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js" defer></script>
+    <script src="index.js" defer></script>
+</body>
+</html>

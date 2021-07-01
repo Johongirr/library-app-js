@@ -1,0 +1,13 @@
+.info {
+    display: none;
+    &__item {
+        display: flex;
+        font-weight: 600;
+        align-items: center;
+        color: #223;
+        justify-content: space-between;
+        border-bottom: 1px solid #333;
+        margin-bottom: 1rem;
+    }
+    
+}

@@ -1,0 +1,317 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5; }
+
+:is(a, button, span, output, time, input, i) {
+  display: inline-block; }
+
+a {
+  text-decoration: none; }
+
+button {
+  border: 0;
+  cursor: pointer; }
+
+li {
+  list-style: none; }
+
+.book {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #f1efef;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0.2rem 0.3rem 0.3rem rgba(0, 0, 0, 0.09); }
+  .book__title, .book__author {
+    font-size: 1.4rem;
+    margin-bottom: 1rem; }
+    .book__title-span, .book__author-span {
+      display: block;
+      font-size: 1rem;
+      color: gray; }
+  .book__read-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem; }
+  .book__read {
+    color: green; }
+  .book__not-read {
+    color: red; }
+  .book__read-btn {
+    color: red;
+    margin-right: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer; }
+  .book__btns {
+    margin: 1rem 0; }
+  .book__edit-btn, .book__delete-btn {
+    font-size: 1.5rem; }
+  .book__edit-btn {
+    color: orange; }
+  .book__delete-btn {
+    margin-left: 1rem;
+    color: red; }
+  .book__read-amount-btn {
+    margin-top: .5rem;
+    background: blue; }
+  .book__increment-btn {
+    margin-left: 1rem; }
+
+.btn {
+  padding: .5rem 1.5rem;
+  color: #fff;
+  font-size: 1.1rem;
+  border-radius: .4rem;
+  box-shadow: 0.2rem 0.3rem 1rem rgba(0, 0, 0, 0.1); }
+  .btn__delete-all-btn {
+    background-color: #d05050; }
+
+.form__edit-book, .form__add-book {
+  width: 400px; }
+
+.form__label, .form__input, .form__select {
+  display: block;
+  width: 100%; }
+
+.form__input, .form__select {
+  padding: .5rem .5rem; }
+
+.form__label {
+  margin-bottom: .3rem;
+  font-weight: 530;
+  font-size: 1.1rem; }
+
+.form__control {
+  margin-bottom: 1rem; }
+  .form__control-checkbox {
+    display: flex;
+    align-items: center; }
+
+.form__input {
+  border-radius: 5px;
+  border: 0; }
+
+.form__checkbox {
+  margin-right: .3rem; }
+
+.form__cancel-btn {
+  background: #0a37b1; }
+
+.form__add-btn, .form__edit-btn {
+  background: #f73b02; }
+
+.form__edit-book, .form__add-book {
+  display: none; }
+
+.genres {
+  overflow-y: scroll;
+  display: none; }
+  .genres__item--active a {
+    color: #9273dd;
+    text-decoration: none; }
+  .genres__link {
+    margin-bottom: 1.5rem;
+    text-decoration: underline;
+    color: #4c00ff; }
+
+.info {
+  display: none; }
+  .info__item {
+    display: flex;
+    font-weight: 600;
+    align-items: center;
+    color: #223;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+    margin-bottom: 1rem; }
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7); }
+  .modal__box {
+    background-color: #f5f4f4;
+    border-radius: .5rem;
+    padding: 1rem;
+    text-align: center; }
+  .modal__title {
+    color: #f12020;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem; }
+  .modal__text {
+    color: #f12020;
+    font-weight: 600;
+    margin-bottom: 2rem; }
+  .modal__footer {
+    margin-top: 1rem; }
+  .modal__cancel-btn {
+    background: blue;
+    margin-right: 1.5rem; }
+  .modal__delete-btn {
+    background: red; }
+
+.search-input {
+  background-color: white;
+  border: 0;
+  color: #333;
+  width: 30rem;
+  padding: .7rem .5rem;
+  font-size: 1.1rem;
+  border-radius: .5rem;
+  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.04); }
+  .search-input::placeholder {
+    color: #333; }
+  .search-input:focus {
+    outline: transparent; }
+
+.sidebar {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  width: 280px;
+  max-width: 90%;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffdcdc; }
+  .sidebar__title {
+    font-family: Marcellus, serif;
+    font-size: clamp(1.5rem, calc(3vw + 1rem), 2.5rem); }
+  .sidebar__book-icon {
+    color: #f73b02; }
+  .sidebar__favourites {
+    margin-top: 2rem; }
+  .sidebar__genres {
+    margin-top: .5rem;
+    margin-left: 3.5rem;
+    height: 15rem; }
+  .sidebar__info {
+    padding: 1rem .7rem; }
+  .sidebar-footer__copyright-text {
+    display: block;
+    padding: 1rem 0; }
+
+.favourites {
+  display: flex;
+  align-items: center; }
+  .favourites__icon {
+    color: #f73b02;
+    font-size: 1.4rem; }
+  .favourites__header {
+    margin-left: 1rem; }
+  .favourites__title {
+    color: #111; }
+  .favourites__direct {
+    color: #333; }
+
+.genres-box {
+  margin-top: 1rem; }
+  .genres-box__header {
+    display: flex;
+    align-items: center; }
+  .genres-box__title {
+    color: #111; }
+  .genres-box__icon {
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    color: #f73b02; }
+
+.info-box {
+  margin-top: 1rem; }
+  .info-box__header {
+    display: flex;
+    align-items: center; }
+  .info-box__title {
+    color: #111; }
+  .info-box__icon {
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    color: #f73b02; }
+  .info-box__arrow {
+    color: #333; }
+
+.danger-zone {
+  margin-top: 1rem; }
+  .danger-zone__header {
+    display: flex;
+    align-items: center; }
+  .danger-zone__title {
+    color: #111; }
+  .danger-zone__icon {
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    color: #f73b02; }
+  .danger-zone__arrow {
+    color: #333; }
+  .danger-zone__btn {
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+    display: none; }
+
+.search-box {
+  padding: 1.5rem 0;
+  text-align: center;
+  background-color: #f7eaea; }
+  .search-box__search-form {
+    width: 35rem;
+    margin: 0 auto; }
+
+.main__main-area {
+  margin-left: 280px;
+  text-align: center; }
+
+.add-books-box {
+  margin-top: 3rem; }
+  .add-books-box__btn {
+    background: purple; }
+  .add-books-box__icon {
+    margin-right: .5rem; }
+
+.form-box, .modal {
+  display: none; }
+
+.form-box {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: 0;
+  z-index: 999;
+  background: #ffadad;
+  padding: 1rem 2rem;
+  border-radius: 1rem; }
+  .form-box__title {
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #111; }
+
+.books {
+  margin-top: 3rem; }
+  .books__title {
+    margin-bottom: 2rem;
+    font-size: 2rem; }
+  .books__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 0 1rem; }

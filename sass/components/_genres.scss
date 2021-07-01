@@ -1,0 +1,15 @@
+.genres {
+    overflow-y: scroll;
+    display: none;
+    &__item--active {
+        a {
+            color: rgb(146, 115, 221);
+            text-decoration: none;
+        }
+    }
+    &__link {
+         margin-bottom: 1.5rem;
+         text-decoration: underline;
+         color: rgb(76, 0, 255);
+    }
+}

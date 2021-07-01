@@ -1,0 +1,65 @@
+.book {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgb(241, 239, 239);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: .2rem .3rem .3rem rgba(0,0,0,.09);
+
+
+    &__title,
+    &__author {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        &-span {
+            display: block;
+            font-size: 1rem;
+            color: gray;
+        }
+    }
+    &__read-status {
+         
+        @include centerInVertically();
+        justify-content: center;
+        font-size: 1.1rem;
+        
+    }
+    &__read {
+        color: green;
+    }
+    &__not-read {
+        color: red;
+    }
+    
+    &__read-btn {
+        color: red;
+        margin-right: .5rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    &__btns {
+        margin: 1rem 0;
+        
+       
+    }
+    &__edit-btn,
+    &__delete-btn {
+        font-size: 1.5rem;
+    }
+    &__edit-btn {  
+        color: orange;
+    }
+    &__delete-btn {
+        margin-left: 1rem;
+        color: red;
+    }
+    &__read-amount-btn {
+        margin-top: .5rem;
+        background: blue;
+    }
+    &__increment-btn {
+        margin-left: 1rem;
+    }
+    
+}

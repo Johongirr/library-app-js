@@ -1,0 +1,16 @@
+.search-input {
+        background-color: lighten($accent-color, 55);
+        border: 0;
+        color: #333;
+        width: 30rem;
+        padding: .7rem .5rem;
+        font-size: 1.1rem;
+        border-radius: .5rem;
+        box-shadow: 0 0 .4rem rgba(0,0,0,0.04);
+        &::placeholder {
+            color: #333;
+        }
+        &:focus {
+            outline: transparent;
+        }
+}
