@@ -23,3 +23,20 @@ button {
 li {
     list-style: none;
 }
+html{
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+        width: .8rem;
+      }
+      
+      /* Track */
+    &::-webkit-scrollbar-track {
+        background: lighten(#ffdcdc, 5); 
+      }
+       
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: darken(#ffdcdc, 10); 
+      }
+        
+}

@@ -1,10 +1,36 @@
 .genres {
     overflow-y: scroll;
     display: none;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      /* Track */
+    &::-webkit-scrollbar-track {
+        background: lighten(#ffdcdc, 60); 
+      }
+       
+      /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: darken(#ffdcdc, 11); 
+      }
+    &__item {
+        text-align: center;
+       
+    }
     &__item--active {
         a {
-            color: rgb(146, 115, 221);
+            color: #f7f7f7;
+            font-weight: bold;
             text-decoration: none;
+            background-color: darken(#ffdcdc, 10);
+            display: block;
+            padding: .5rem 0;
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 1.5rem;
+             
         }
     }
     &__link {

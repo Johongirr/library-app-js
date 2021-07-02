@@ -2,8 +2,13 @@
 
     &__edit-book,
     &__add-book {
+        max-width: 85%;
         width: 400px;
-    }     
+        @media(max-width: 600px){
+            width: 320px;
+        }
+    } 
+
 
     &__label,
     &__input,

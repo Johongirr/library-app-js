@@ -12,12 +12,33 @@
     width: 280px;
     max-width: 90%;
     padding-top: 1rem;
-    padding-left: 2rem;
+    padding-left: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: #ffdcdc;
+    overflow-y: scroll;
+    transition: all .2s ease-in-out;
+    @media(max-width: 900px){
+        transform: translateX(-300px);
+    }
+    &.active {
+        transform: translateX(0);
+    }
 
+    &::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      /* Track */
+    &::-webkit-scrollbar-track {
+        background: lighten(#ffdcdc, 10); 
+      }
+       
+      /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: darken(#ffdcdc, 11); 
+      }
     &__title {
         font-family: $heading-font;
         font-size: clamp(1.5rem, calc(3vw + 1rem), 2.5rem);
@@ -30,7 +51,7 @@
     }
     &__genres {
         margin-top: .5rem;
-        margin-left: 3.5rem;
+         
         height: 15rem;
     }
     &__info {
@@ -59,6 +80,8 @@
 }
 .genres-box {
     margin-top: 1rem;
+    margin-right: .5rem;
+    
     &__header {
         @include centerInVertically();
     }
@@ -122,6 +145,9 @@
 .main__main-area {
     margin-left: 280px;
     text-align: center;
+    @media(max-width: 900px){
+        margin-left: 0;
+    }
 }
 .add-books-box {
     margin-top: 3rem;
@@ -164,8 +190,12 @@
     }
     &__row {
         display: grid;
-        grid-template-columns: repeat(auto-fill,  minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fit,  minmax(250px, 1fr));
         gap: 2rem;
         margin: 0 1rem;
+        @media(max-width: 900px){
+            width: 90%;
+            margin: 0 auto;
+        }
     }
 }

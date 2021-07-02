@@ -22,6 +22,17 @@ button {
 li {
   list-style: none; }
 
+html {
+  scroll-behavior: smooth;
+  /* Track */
+  /* Handle */ }
+  html::-webkit-scrollbar {
+    width: .8rem; }
+  html::-webkit-scrollbar-track {
+    background: #fff6f6; }
+  html::-webkit-scrollbar-thumb {
+    background: #ffa9a9; }
+
 .book {
   display: flex;
   flex-direction: column;
@@ -76,7 +87,11 @@ li {
     background-color: #d05050; }
 
 .form__edit-book, .form__add-book {
+  max-width: 85%;
   width: 400px; }
+  @media (max-width: 600px) {
+    .form__edit-book, .form__add-book {
+      width: 320px; } }
 
 .form__label, .form__input, .form__select {
   display: block;
@@ -114,14 +129,65 @@ li {
 
 .genres {
   overflow-y: scroll;
-  display: none; }
+  display: none;
+  /* Track */
+  /* Handle */ }
+  .genres::-webkit-scrollbar {
+    width: 10px; }
+  .genres::-webkit-scrollbar-track {
+    background: white; }
+  .genres::-webkit-scrollbar-thumb {
+    background: #ffa4a4; }
+  .genres__item {
+    text-align: center; }
   .genres__item--active a {
-    color: #9273dd;
-    text-decoration: none; }
+    color: #f7f7f7;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #ffa9a9;
+    display: block;
+    padding: .5rem 0;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem; }
   .genres__link {
     margin-bottom: 1.5rem;
     text-decoration: underline;
     color: #4c00ff; }
+
+.hamburger-menu {
+  position: fixed;
+  top: 2rem;
+  left: 1rem;
+  width: 5rem;
+  cursor: pointer;
+  z-index: 1;
+  transition: all .3s ease-in-out;
+  margin-left: 0; }
+  @media (min-width: 900px) {
+    .hamburger-menu {
+      display: none; } }
+  .hamburger-menu__line {
+    background-color: #fe997b;
+    height: 4px;
+    width: 3rem;
+    transition: all .3s ease-in-out; }
+    .hamburger-menu__line:not(:last-child) {
+      margin-bottom: .4rem; }
+    .hamburger-menu__line:nth-child(2) {
+      width: 2rem; }
+    .hamburger-menu__line:last-child {
+      width: 1.5rem; }
+  .hamburger-menu.active {
+    margin-left: 200px; }
+    .hamburger-menu.active .hamburger-menu__line:nth-child(2) {
+      width: 2rem;
+      opacity: 0; }
+    .hamburger-menu.active .hamburger-menu__line:first-child {
+      transform: rotate(45deg) translateY(0.5rem) translateX(0.3rem); }
+    .hamburger-menu.active .hamburger-menu__line:last-child {
+      width: 3rem;
+      transform: rotate(-45deg) translateY(-0.7rem) translateX(0.3rem); }
 
 .info {
   display: none; }
@@ -171,10 +237,14 @@ li {
   border: 0;
   color: #333;
   width: 30rem;
+  max-width: 60%;
   padding: .7rem .5rem;
   font-size: 1.1rem;
   border-radius: .5rem;
   box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.04); }
+  @media (max-width: 900px) {
+    .search-input {
+      margin-left: 7rem; } }
   .search-input::placeholder {
     color: #333; }
   .search-input:focus {
@@ -187,11 +257,26 @@ li {
   width: 280px;
   max-width: 90%;
   padding-top: 1rem;
-  padding-left: 2rem;
+  padding-left: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #ffdcdc; }
+  background-color: #ffdcdc;
+  overflow-y: scroll;
+  transition: all .2s ease-in-out;
+  /* Track */
+  /* Handle */ }
+  @media (max-width: 900px) {
+    .sidebar {
+      transform: translateX(-300px); } }
+  .sidebar.active {
+    transform: translateX(0); }
+  .sidebar::-webkit-scrollbar {
+    width: 10px; }
+  .sidebar::-webkit-scrollbar-track {
+    background: white; }
+  .sidebar::-webkit-scrollbar-thumb {
+    background: #ffa4a4; }
   .sidebar__title {
     font-family: Marcellus, serif;
     font-size: clamp(1.5rem, calc(3vw + 1rem), 2.5rem); }
@@ -201,7 +286,6 @@ li {
     margin-top: 2rem; }
   .sidebar__genres {
     margin-top: .5rem;
-    margin-left: 3.5rem;
     height: 15rem; }
   .sidebar__info {
     padding: 1rem .7rem; }
@@ -223,7 +307,8 @@ li {
     color: #333; }
 
 .genres-box {
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  margin-right: .5rem; }
   .genres-box__header {
     display: flex;
     align-items: center; }
@@ -277,6 +362,9 @@ li {
 .main__main-area {
   margin-left: 280px;
   text-align: center; }
+  @media (max-width: 900px) {
+    .main__main-area {
+      margin-left: 0; } }
 
 .add-books-box {
   margin-top: 3rem; }
@@ -312,6 +400,10 @@ li {
     font-size: 2rem; }
   .books__row {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin: 0 1rem; }
+    @media (max-width: 900px) {
+      .books__row {
+        width: 90%;
+        margin: 0 auto; } }

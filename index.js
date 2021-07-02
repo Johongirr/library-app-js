@@ -4,6 +4,8 @@ const favouritesBtn = document.querySelector(".favourites__link");
 const searchBookInput = document.querySelector(".search-input");
 const bookTitle = document.querySelector(".books__title");
 const booksRow = document.querySelector(".books__row");
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+const sidebar = document.querySelector(".sidebar");
 
 let books = JSON.parse(window.localStorage.getItem("books")) || [];
 let readPages = JSON.parse(window.localStorage.getItem("read-pages")) || [];
@@ -13,6 +15,7 @@ const toggleBooleanValues = {
     isGenresOpen: false,
     isInformationOpen: false,
     isDangerZoneOpen: false,
+    isMenuOpen: false,
 };
 
 const addBookFormNodes = {
@@ -452,10 +455,15 @@ const displayGenres = (event)=>{
         toggleBooleanValues.isGenresOpen = !toggleBooleanValues.isGenresOpen;
     }
 };
+const removeActiveClass = ()=>{
+    genresNodes.genres.forEach(genre => genre.parentElement.classList.remove("genres__item--active"));
+}
 const toggleGenreContainer = (event)=>{
     const books = BookStore.getBooksFromLocalStorage();
     booksRow.innerHTML = "";
     bookTitle.textContent = event.target.textContent.trim();
+    removeActiveClass();
+    event.target.parentElement.classList.add("genres__item--active");
     books.forEach(book => console.log(book.category, event.target.textContent.trim()));
     books
         .filter(book =>  book.category == event.target.textContent.trim())
@@ -478,10 +486,14 @@ const deleteAllBooks = (event)=>{
 
     window.location.reload();
 };
+ 
 const toggleDangerZoneContainer = (event)=>{
+    
     if(!toggleBooleanValues.isDangerZoneOpen){
         displayNode(dangerZoneNodes.deleteAllBtn);
+       
         toggleBooleanValues.isDangerZoneOpen = !toggleBooleanValues.isDangerZoneOpen;
+        
     } else {
         toggleBooleanValues.isDangerZoneOpen = !toggleBooleanValues.isDangerZoneOpen; 
         hideNode(dangerZoneNodes.deleteAllBtn);   
@@ -497,6 +509,20 @@ const displayMatchedBooks = ({target: {value}})=>{
         .filter(book => book.title.toLowerCase().includes(value.trim().toLowerCase()))
         .forEach(book => Book.addBookToDOM(book));
 }
+const toggleMenu = (event)=>{
+    const el = event.target;
+    console.log(event.target);
+    if(!toggleBooleanValues.isMenuOpen){
+        toggleBooleanValues.isMenuOpen = !toggleBooleanValues.isMenuOpen;
+        sidebar.classList.add("active");
+        el == hamburgerMenu ? el.classList.add("active") : el.parentElement.classList.add("active");
+    } else {
+        toggleBooleanValues.isMenuOpen = !toggleBooleanValues.isMenuOpen;
+        el == hamburgerMenu ? el.classList.remove("active") : el.parentElement.classList.remove("active");
+        sidebar.classList.remove("active");
+    }
+}
+
 
 addNewBookBtn.addEventListener("click", displayAddForm);
 
@@ -514,4 +540,4 @@ dangerZoneNodes.dangerZoneBtn.addEventListener("click", toggleDangerZoneContaine
 
 searchBookInput.addEventListener("input", displayMatchedBooks);
 
- 
+hamburgerMenu.addEventListener("click", toggleMenu);

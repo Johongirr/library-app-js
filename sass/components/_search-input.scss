@@ -3,10 +3,14 @@
         border: 0;
         color: #333;
         width: 30rem;
+        max-width: 60%;
         padding: .7rem .5rem;
         font-size: 1.1rem;
         border-radius: .5rem;
         box-shadow: 0 0 .4rem rgba(0,0,0,0.04);
+        @media(max-width: 900px){
+            margin-left: 7rem;
+        }
         &::placeholder {
             color: #333;
         }
